@@ -17,7 +17,6 @@ import { CusDobPicker } from "../forms/CusDob";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
 import { getCountryCallingCode, CountryCode } from "libphonenumber-js";
 import { CusContactField } from "../forms/CusContactField";
-import { File } from "buffer";
 import { useRouter } from "next/navigation";
 import { currencies } from "@/data/currency";
 import { format } from "date-fns";
