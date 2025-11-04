@@ -432,10 +432,6 @@ export default function Home() {
           </TabsContent>
         </Tabs>
       </div>
-      <InterviewDrawer
-        open={interviewDrawerOpen}
-        onOpenChange={() => setInterviewDrawerOpen(false)}
-      />
       <CandidateDrawer
         open={salaryDrawerOpen}
         onOpenChange={() => setSalaryDrawerOpen(false)}
