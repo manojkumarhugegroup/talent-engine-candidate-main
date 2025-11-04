@@ -24,6 +24,7 @@ import {
 } from "@/types/profile";
 import { useDataContext } from "@/context/DataProvider";
 import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [loading, setLoading] = useState({
@@ -38,6 +39,8 @@ export default function Home() {
   });
 
   const user_id = Cookies.get("user_id");
+
+  const router = useRouter();
 
   const searchParams = useSearchParams();
   const [interviewSlot, setInterviewSlot] = useState(false);
@@ -234,6 +237,7 @@ export default function Home() {
   const handleSlotClose = async () => {
     setInterviewSlot(false);
     setinterviewID("");
+    router.push("/dashboard")
   };
 
   return (

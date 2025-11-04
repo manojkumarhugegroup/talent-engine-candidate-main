@@ -112,13 +112,14 @@ export function InterviewDrawer({
         throw new Error(`Failed: ${res.status} ${res.statusText}`);
       }
       const responseData = await res.json();
-      // if (responseData.message?.status === "success") {
-      //   toast.success(responseData.message || "Slot Accepted ✅");
-      //   toggleDrawer();
-      // } else {
-      //   toast.error(responseData.message || "Slot failed ❌");
-      // }
-      toggleDrawer();
+      console.log(responseData,'responseData');
+      
+      if (responseData?.message?.status === "success") {
+        toast.success(responseData?.message?.message || "Slot Accepted ✅");
+        toggleDrawer();
+      } else {
+        toast.error("Interview slot accepted failed ❌");
+      }
       setSubmitting(false);
     } catch (error: unknown) {
       if (error instanceof Error) {
