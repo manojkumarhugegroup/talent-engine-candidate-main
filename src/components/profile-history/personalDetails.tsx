@@ -131,13 +131,13 @@ export function PersonalDetails({
                     alt="location"
                   />
                   <span className="text-white text-xs">
-                    {profession.address}
+                    {profession.current_location}
                   </span>
                 </div>
               </div>
               <div className="text-xs">
                 <p className="text-white mb-0.5">Date Of Birth</p>
-                <span className="text-white font-bold">{profession.dob}</span>
+                <span className="text-white font-bold">{profession.date_of_birth}</span>
               </div>
               <div className="text-xs">
                 <p className="text-white mb-0.5">Gender</p>
@@ -165,13 +165,13 @@ export function PersonalDetails({
                     className="w-4 h-4 "
                     alt="mobile"
                   />
-                  <span className="text-white text-xs">{profession.phone}</span>
+                  <span className="text-white text-xs">{profession.contact_no}</span>
                 </div>
               </div>
               <div className="text-xs">
                 <p className="text-white mb-0.5">Location</p>
                 <span className="text-white font-bold">
-                  {profession.location}
+                  {profession.current_location}
                 </span>
               </div>
               <div className="text-xs">
@@ -186,7 +186,7 @@ export function PersonalDetails({
         <div className="mb-6 ">
           <h3 className="text-white font-medium mb-3 text-base">Keywords</h3>
           <div className="flex flex-wrap gap-2">
-            {profession.keywords.map((keyword, index) => (
+            {profession?.key_skills?.map((keyword, index) => (
               <Badge
                 key={index}
                 variant="secondary"
@@ -204,7 +204,7 @@ export function PersonalDetails({
         </div>
         <div className="bg-(--badge-color) p-3 rounded">
           <p className="text-base font-medium mb-1">
-            {profession.current_role}
+            {profession.current_salary_currency}
           </p>
           <p className="text-sm ">
             Current Salary/month : {profession.current_salary}
@@ -212,14 +212,14 @@ export function PersonalDetails({
         </div>
         <div className=" py-4">
           <span className="text-white text-md font-medium">Summary</span>
-          <p className="text-xs mt-0.5 font-normal">{profession.summary}</p>
+          <p className="text-xs mt-0.5 font-normal">{profession.professional_summary}</p>
         </div>
-        <div className="mb-2">
+        {/* <div className="mb-2">
           <span className="text-white text-base font-medium">
             Proffered Job Location
           </span>
           <p className="text-xs mt-1 font-normal">{profession.location}</p>
-        </div>
+        </div> */}
         <div className=" py-4 flex flex-col">
           <span className="text-white text-base font-medium mb-1.5">
             External Profile Links
@@ -232,7 +232,7 @@ export function PersonalDetails({
                   <TableHead className="w-1/3">URL Link</TableHead>
                 </TableRow>
               </TableHeader>
-              <TableBody className="bg-transparent">
+              {/* <TableBody className="bg-transparent">
                 {profession.links.map((product, i) => (
                   <TableRow key={i} className="odd:bg-muted/50">
                     <TableCell className=" w-2/3">{product.name}</TableCell>
@@ -248,7 +248,7 @@ export function PersonalDetails({
                     </TableCell>
                   </TableRow>
                 ))}
-              </TableBody>
+              </TableBody> */}
             </Table>
           </div>
         </div>
@@ -265,7 +265,7 @@ export function PersonalDetails({
                   <TableHead className="">Reference (Link)</TableHead>
                 </TableRow>
               </TableHeader>
-              <TableBody className="bg-transparent">
+              {/* <TableBody className="bg-transparent">
                 {profession.skills.map((skill, i) => (
                   <TableRow key={i} className="odd:bg-muted/50">
                     <TableCell className="">{skill.name}</TableCell>
@@ -282,7 +282,7 @@ export function PersonalDetails({
                     </TableCell>
                   </TableRow>
                 ))}
-              </TableBody>
+              </TableBody> */}
             </Table>
           </div>
         </div>
@@ -290,7 +290,7 @@ export function PersonalDetails({
         <div className=" py-2">
           <span className="text-white text-base font-medium">Projects</span>
         </div>
-        <div className="bg-(--badge-color) p-4 rounded mb-2">
+        {/* <div className="bg-(--badge-color) p-4 rounded mb-2">
           {profession.project?.map((project, i) => {
             const startDate = formatDate(project.start_date);
             const endDate = formatDate(project.end_date);
@@ -318,7 +318,7 @@ export function PersonalDetails({
               </div>
             );
           })}
-        </div>
+        </div> */}
 
         <div className="mb-2 py-2 flex flex-col">
           <span className="text-white text-base font-medium mb-1.5">
@@ -335,7 +335,7 @@ export function PersonalDetails({
                   <TableHead className="">URL Link</TableHead>
                 </TableRow>
               </TableHeader>
-              <TableBody className="bg-transparent">
+              {/* <TableBody className="bg-transparent">
                 {profession.certification.map((certi, i) => {
                   const issuedDate = formatDate(certi.issued_date);
                   const expDate = formatDate(certi.exp_date);
@@ -365,7 +365,7 @@ export function PersonalDetails({
                     </TableRow>
                   );
                 })}
-              </TableBody>
+              </TableBody> */}
             </Table>
           </div>
         </div>
@@ -384,7 +384,7 @@ export function PersonalDetails({
                   <TableHead className="">Score</TableHead>
                 </TableRow>
               </TableHeader>
-              <TableBody className="bg-transparent">
+              {/* <TableBody className="bg-transparent">
                 {profession.education.map((education, i) => (
                   <TableRow key={i} className="odd:bg-muted/50">
                     <TableCell
@@ -401,7 +401,7 @@ export function PersonalDetails({
                     <TableCell className=" ">{education.score}</TableCell>
                   </TableRow>
                 ))}
-              </TableBody>
+              </TableBody> */}
             </Table>
           </div>
         </div>
