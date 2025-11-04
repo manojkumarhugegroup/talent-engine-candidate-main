@@ -49,7 +49,7 @@ export function ProfileCard({ profile }: ProfileCardProps) {
         <Avatar className="w-32 h-32 mx-auto mb-2">
           <AvatarImage
             src={
-              profile.profile_image?.file_url || "/assets/icons/placeholder.svg"
+              profile?.profile_image || "/assets/icons/placeholder.svg"
             }
           />
           <AvatarFallback className="text-2xl">

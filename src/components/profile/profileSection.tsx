@@ -35,7 +35,7 @@ export function ProfileSection({ profile }: ProfileCardProps) {
         <div className="text-center mb-2">
           <Avatar className="w-32 h-32 mx-auto mb-2">
             <AvatarImage
-              src={profile.profile_image?.file_url || "/assets/icons/placeholder.svg"}
+              src={profile?.profile_image || "/assets/icons/placeholder.svg"}
             />
             <AvatarFallback className="text-2xl">
               {profile.name?.[0]}
