@@ -19,9 +19,15 @@ export default function VerifyUser({
       fullName === "null"
     ) {
       // router.push("/login");
-      router.push("/");
+      const currentUrl = window.location.href;
+      const baseUrl = window.location.origin + "/dashboard";
+      if (currentUrl.startsWith(baseUrl)) return;
+      router.push("/dashboard");
     } else {
-      router.push("/");
+      const currentUrl = window.location.href;
+      const baseUrl = window.location.origin + "/dashboard";
+      if (currentUrl.startsWith(baseUrl)) return;
+      router.push("/dashboard");
     }
   }, [router]);
 

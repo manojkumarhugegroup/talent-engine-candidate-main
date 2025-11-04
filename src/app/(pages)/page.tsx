@@ -1,11 +1,12 @@
 "use client";
 import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Loading from "../Loading";
 import Cookies from "js-cookie";
 
 export default function Home() {
   const router = useRouter();
+  const pathname = usePathname();
 
   const fetchCandidate = async () => {
     try {
@@ -29,9 +30,20 @@ export default function Home() {
     }
   };
 
-  useEffect(() => {
-    fetchCandidate();
-  }, [router]);
+  // useEffect(() => {
+  //   fetchCandidate();
+  // }, []);
+
+  // console.log(pathname,'pathname');
+  
+
+  // useEffect(() => {
+  //   const currentUrl = window.location.href;
+  //   const baseUrl = window.location.origin + "/dashboard";
+  //   if (currentUrl.startsWith(baseUrl)) return;
+  //   const redirectUrl = "/dashboard";
+  //   router.push(redirectUrl);
+  // }, [router, pathname]);
 
   return (
     <div className="flex items-center justify-center h-[calc(100vh-48px)] p-8 sm:p-20">
