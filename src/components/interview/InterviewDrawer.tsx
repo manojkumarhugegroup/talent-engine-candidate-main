@@ -45,6 +45,7 @@ interface InterviewData {
     name: string;
     slot_date: string;
     slot_time: string;
+    slot_timezone: string;
   }[];
 }
 
@@ -273,7 +274,7 @@ export function InterviewDrawer({
                                 {formatDate(slot.slot_date)}
                               </TableCell>
                               <TableCell className="text-(--action-text)">
-                                {formatTime(slot.slot_time)}
+                                {formatTime(slot.slot_time) + "--" + slot?.slot_timezone}
                               </TableCell>
                             </TableRow>
                           ))}
