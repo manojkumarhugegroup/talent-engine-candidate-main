@@ -11,7 +11,6 @@ import {
   SheetTitle,
 } from "@/components/forms/CustomSheet";
 import { Label } from "@/components/ui/label";
-import FileUpload from "../shared/Upload";
 import Link from "next/link";
 import { ResumePreview } from "../create-new-candidate/Resume-preview";
 import { FileUploadArea } from "../create-new-candidate/file-upload-area";
@@ -171,7 +170,7 @@ export function ReviseDrawer({ open, onOpenChange }: ReviseDrawerProps) {
             </Label>
           </Link>
 
-          {showPreview && uploadedFile ? (
+          {/* {showPreview && uploadedFile ? (
             <ResumePreview
               file={uploadedFile}
               onDelete={() => {
@@ -187,18 +186,7 @@ export function ReviseDrawer({ open, onOpenChange }: ReviseDrawerProps) {
               uploadedFileName={uploadedFile?.name}
               onCancelUpload={handleCancelUpload}
             />
-          )}
-          {/* <FileUpload
-                        onFileSelect={handleFileSelect}
-                        accept={{
-                            "application/pdf": [],
-                            "application/vnd.openxmlformats-officedocument.wordprocessingml.document": [],
-                        }}
-                        maxSize={1024 * 1024 * 5} // 5MB
-                        multiple={false}
-                        maxFiles={1}
-                    /> */}
-
+          )} */}
           {/* Preview Section */}
           {files.length > 0 && (
             <div className="flex flex-wrap gap-2 mt-4">
