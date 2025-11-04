@@ -22,7 +22,6 @@ export const profileData: Profile = {
         "ERP Systems",
         "Compliance Management",
     ],
-    avatar: "/assets/icons/placeholder.svg",
     version_no: "V2.5",
     percent_completion: 75,
     passport_number: "NBTU9078798"
@@ -73,7 +72,7 @@ export const professionData: Profession = {
     ],
     education: [
         {
-            title: "B.Sc. in Mechanical Engineering", institute: "B.Sc. in Mechanical Engineering", year: 2024, dept: "	Energy Systems", score: "85%"
+            title: "B.Sc. in Mechanical Engineering", institution: "B.Sc. in Mechanical Engineering", graduation_year: 2024, specialization: "Energy Systems", score: "85%"
         }
     ]
 }
